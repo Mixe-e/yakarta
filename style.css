@@ -1,9 +1,13 @@
 
 
+
+
+
+
 body{
     
     background-image: url('img/watchdogs.jpg');
-
+    background-size: cover;
 
 }
 
