@@ -1,8 +1,37 @@
 
+.img-juego {
+        height: 250px;
+        object-fit: contain; 
+    }
 
+.logo-navbar {
+        height: 40px; 
+        width: auto; 
+        object-fit: contain;
+    }
 
+.navbar .nav-link, 
+.navbar .navbar-brand {
+    color: #ffffff;
+}
 
+.card-title{
+    color: white;
+}
 
+.img-carrusel {
+        height: 450px;
+        object-fit: cover; 
+        object-position: center;
+    }
+
+.navbar-custom {
+        background-color: rgb(20, 19, 19);
+    }
+
+.navbar {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
 
 body{
     

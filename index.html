@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Index</title>
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">YAKARTA</a>
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logofeoyakarta.png" alt="Logo Tienda" class="logo-navbar">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,8 +32,20 @@
             </li>
             <li class="nav-item">
             <a class="nav-link" href="iniciodesesion.html">Inicio de sesion</a>
-            </li>           
+            </li>
         </ul>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item">
+                <a class="btn btn-outline-light position-relative d-flex align-items-center gap-2" href="carrito.html">
+                    <i class="bi bi-cart3 fs-5"></i>
+                    <span>Carrito</span>
+                </a>
+                </li>
+            </ul>
+
+        </div>
         </div>
     </div>
     </nav>
@@ -45,20 +60,73 @@
     </div>
 
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-        <img src="imagenes/nationalgeographic_1468962.jpg" class="d-block w-100" alt="..." data-bs-interval="10">
-        </div>
-        <div class="carousel-item">
-        <img src="img/granturismo5_229829b.jpg" class="d-block w-100" alt="..." data-bs-interval="10">
-        </div>
-        <div class="carousel-item">
-        <img src="img/2008_Audi_R8.webp" class="d-block w-100" alt="..." data-bs-interval="10">
-        </div>
-    </div>
+
+    <div class="container text-center" style="padding-top: 2%; padding-bottom: 2%;">
+        <h1> Los mejores juegos, al mejor precio </h1>
     </div>
 
+
+
+<div id="carruselJuegos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    
+    <!-- Indicadores (los puntos/rayitas abajo) -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carruselJuegos" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#carruselJuegos" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carruselJuegos" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+        
+
+        <div class="carousel-item active">
+            <img src="imgtienda/Midnight_Club-Los_Angeles.jpg" class="d-block w-100 img-carrusel" alt="Midnight Club">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                <h3 class="fw-bold text-white">Midnight Club Los Angeles</h3>
+                <p>¡El mejor juego de carreras callejeras al mejor precio!</p>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <img src="imgtienda/fifastreet.jpg" class="d-block w-100 img-carrusel" alt="Fifa Street 2">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                <h3 class="fw-bold text-white">FIFA Street 2</h3>
+                <p>Domina las calles con los mejores regates y trucos.</p>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <img src="imgtienda/black.jpg" class="d-block w-100 img-carrusel" alt="Black">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                <h3 class="fw-bold text-white">BLACK</h3>
+                <p>La experiencia de acción y disparos definitiva.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselJuegos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselJuegos" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
+</div>
+
+    <script>
+
+        const miCarrusel = document.querySelector('#carruselJuegos');
+        const carousel = new bootstrap.Carousel(miCarrusel, {
+            interval: 1000,   
+            wrap: true,       
+            pause: false      
+        });
+    </script>
 
 
 
