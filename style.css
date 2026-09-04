@@ -36,3 +36,10 @@ h5{
 h4{
     color: white;
 }
+
+.formcontactanos{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
