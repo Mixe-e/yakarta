@@ -5,71 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
 
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">YAKARTA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link" href="tienda.html">Tienda</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="galeria.html">Galeria</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="contactanos.html">Contactanos</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="iniciodesesion.html">Inicio de sesion</a>
-                </li>           
-            </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logofeoyakarta.png" alt="Logo Tienda" class="logo-navbar">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link" href="tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="contactanos.html">Contactanos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="iniciodesesion.html">Inicio de sesion</a>
+            </li>           
+        </ul>
         </div>
+    </div>
     </nav>
 
 
-    <div class="container text-center">
-        <div class="row align-items-center">
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/2008_Audi_R8.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Tienda</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <div class="container text-center my-4">
+        <div class="row align-items-stretch"> 
+            
+
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white h-100">
+                        <img src="imgtienda/Midnight_Club-Los_Angeles.jpg" class="card-img-top img-juego" alt="Midnight Club">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title">Midnight club</h5>
+                                <p class="card-text">$ 15000 CLP</p>
+                            </div>
+                            <button onclick="agregarAlCarrito('Midnight club', 15000, 'imgtienda/Midnight_Club-Los_Angeles.jpg')" class="btn btn-primary w-100 mt-3">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/2008_Audi_R8.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="imgtienda/fifastreet.jpg" class="card-img-top img-juego" alt="Fifa Street 2">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title">Fifa street 2</h5>
+                                <p class="card-text">$ 10000 CLP</p>
+                            </div>
+                            <button onclick="agregarAlCarrito('Fifa street 2', 10000, 'imgtienda/fifastreet.jpg')" class="btn btn-primary w-100 mt-3">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="img/2008_Audi_R8.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+
+
+
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-white h-100">
+                        <img src="imgtienda/black.jpg" class="card-img-top img-juego" alt="Black">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <h5 class="card-title">Black</h5>
+                                <p class="card-text">$ 5000 CLP</p>
+                            </div>
+                            <button onclick="agregarAlCarrito('Black', 5000, 'imgtienda/black.jpg')" class="btn btn-primary w-100 mt-3">Agregar al carrito</button>
+                        </div>
                     </div>
                 </div>
+
+                <script>
+                    function agregarAlCarrito(nombre, precio, imagen) {
+                        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                        let juegoExistente = carrito.find(producto => producto.nombre === nombre);
+                        if (juegoExistente) {
+                            juegoExistente.cantidad += 1;
+                        } else {
+                            carrito.push({
+                                nombre: nombre,
+                                precio: precio,
+                                imagen: imagen,
+                                cantidad: 1
+                            });
+                        }
+                        localStorage.setItem('carrito', JSON.stringify(carrito));
+                        alert(`¡${nombre} se agregó al carrito!`);
+                    }
+                </script>
+
             </div>
-        </div>
     </div>
 
 </body>
