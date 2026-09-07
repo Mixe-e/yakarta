@@ -1,5 +1,65 @@
-body{
+
+.accordionfondo .accordion-item,
+.accordionfondo .accordion-button,
+.accordionfondo .accordion-body {
     background-color: black;
+    color: white;
+}
+
+
+
+
+.accordionfondo .accordion-button::after {
+    filter: invert(1) brightness(200%);
+}
+
+.accordionfondo .accordion-button:not(.collapsed) {
+    background-color: black;
+    color: white;
+    box-shadow: none;
+}
+
+.img-juego {
+        height: 250px;
+        object-fit: contain; 
+    }
+
+.logo-navbar {
+        height: 40px; 
+        width: auto; 
+        object-fit: contain;
+    }
+
+.navbar .nav-link, 
+.navbar .navbar-brand {
+    color: white;
+}
+
+.card-title{
+    color: white;
+}
+
+.img-carrusel {
+        height: 450px;
+        object-fit: cover; 
+        object-position: center;
+    }
+
+.navbar-custom {
+        background-color: rgb(20, 19, 19);
+    }
+
+.navbar {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+
+
+
+body{
+    
+    background-color: black;
+
 }
 
 
@@ -17,17 +77,10 @@ h2{
     color: white;
 }
 
-
 h3{
     color: white;
 }
-
-
 h5{
-    color: white;
-}
-
-h6{
     color: white;
 }
 
@@ -35,7 +88,9 @@ h4{
     color: white;
 }
 
-a{
-    color: white;
+.formcontactanos{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
-
