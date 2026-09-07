@@ -6,6 +6,9 @@
     color: white;
 }
 
+
+
+
 .accordionfondo .accordion-button::after {
     filter: invert(1) brightness(200%);
 }
@@ -49,6 +52,9 @@
 .navbar {
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     }
+
+
+
 
 body{
     
