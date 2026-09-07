@@ -1,4 +1,21 @@
 
+.accordionfondo .accordion-item,
+.accordionfondo .accordion-button,
+.accordionfondo .accordion-body {
+    background-color: black;
+    color: white;
+}
+
+.accordionfondo .accordion-button::after {
+    filter: invert(1) brightness(200%);
+}
+
+.accordionfondo .accordion-button:not(.collapsed) {
+    background-color: black;
+    color: white;
+    box-shadow: none;
+}
+
 .img-juego {
         height: 250px;
         object-fit: contain; 
@@ -12,7 +29,7 @@
 
 .navbar .nav-link, 
 .navbar .navbar-brand {
-    color: #ffffff;
+    color: white;
 }
 
 .card-title{

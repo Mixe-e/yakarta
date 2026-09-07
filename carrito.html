@@ -26,7 +26,7 @@
                     <h4>Resumen</h4>
                     <hr>
                     <h5>Total: <span id="totalPagar">$ 0 CLP</span></h5>
-                    <button class="btn btn-success w-100 mt-3">Proceder al Pago</button>
+                    <button onclick="irADireccion()" class="btn btn-success w-100 mt-3"> Proceder al Pago </button>
                     <button onclick="vaciarCarrito()" class="btn btn-outline-danger w-100 mt-2">Vaciar Carrito</button>
                     <a href="index.html" class="btn btn-link text-white text-center mt-2">Volver a la tienda</a>
                 </div>
@@ -38,6 +38,16 @@
     <script>
         document.addEventListener('DOMContentLoaded', cargarCarrito);
 
+
+        function irADireccion() {
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            if (carrito.length === 0) {
+                alert("Tu carrito está vacío. Agrega al menos un producto para proceder al pago.");
+            } else {
+                window.location.href = 'direccion.html';
+            }
+        }
+
         function cargarCarrito() {
             let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
             let listaContainer = document.getElementById('listaCarrito');
@@ -47,7 +57,7 @@
             let total = 0;
 
             if (carrito.length === 0) {
-                listaContainer.innerHTML = '<li class="list-group-item bg-dark text-white border-secondary">El carrito está vacío.</li>';
+                listaContainer.innerHTML = '<li class="list-group-item bg-dark text-white border-secondary">El carrito está vacío. </li>';
                 totalContainer.textContent = '$ 0 CLP';
                 return;
             }
