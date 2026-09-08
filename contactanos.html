@@ -12,13 +12,7 @@
 
 <body>
 
-<<<<<<< HEAD
 
-    
-
-=======
-   
->>>>>>> 625ba7fb7a30980200474dddc49b084b416d4845
     <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
@@ -53,10 +47,7 @@
         </div>
         </div>
     </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 625ba7fb7a30980200474dddc49b084b416d4845
     </nav>
 
 
@@ -100,10 +91,13 @@
     Deja tus datos aqui:
 </h1>
 
+
+
+<div class="contenedor-principal">
 <div class="formcontactanos"> 
-<form class="row g-3" style="text-align: center;" >
+<form id="formulario" class="row g-3" style="text-align: center;" >
     <div class="row g-3  ">
-      <div class="col-auto">
+      <div class="col-6">
   <label style="color: white;" for="gmail" class="form-label">Gmail</label>
   <input type="email" class="form-control" id="gmail" maxlength="100"  pattern=".+@(gmail\.com|duoc\.cl|profesor\.duoc\.cl)$" required placeholder="name@example.com">
   <div style="color: rgb(151, 151, 151);" id="maximo" class="form-text">
@@ -112,7 +106,7 @@
 </div>
 </div>
 <div class="row g-3 align-items-center" style="text-align: center;">
-  <div class="col-auto">
+  <div class="col-6">
   <label style="color: white;" for="nombre"  class="form-label" >Nombre</label>
   <input type="text" class="form-control"  required  id="nombre">
   <div style="color: rgb(151, 151, 151);" id="caracteres" class="form-text">
@@ -122,7 +116,7 @@
 
 
 <div class="row g-3 align-items-center">
-  <div class="col-auto">
+  <div class="col-6">
   <label style="color: white;" for="telefono" class="form-label">Telefono</label>
   <input type="number" class="form-control" minlength="1" maxlength="9" required id="telefono" >
 </div>
@@ -134,11 +128,44 @@
 </div>
 
 
-<div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Confirmar</button>
+<script>
+  const formulario = document.getElementById('formulario');
+
+  formulario.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+
+    const email = document.getElementById('gmail').value;
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+  
+
+
+
+alert(`¡Información enviada correctamente!\n\nDatos registrados:\n- Nombre: ${nombre}\n- Correo: ${email}\n- Telefono: ${telefono}`);
+
+    formulario.reset();
+  });
+</script>
+
+
+
+
+<div id="boton" class="col-6">
+    <button id="botonpress" type="submit" class="btn btn-primary mb-3" >Confirmar</button>
   </div>
 </div>
+
+
+
+
 </div>
+
+
+
+
+</div>
+
 
 
 </form>

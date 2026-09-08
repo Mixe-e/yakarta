@@ -107,3 +107,13 @@ h4{
     top: 10px;
     left: 1000px;
 }
+
+.contenedor-principal {
+    position: absolute;
+    left: 550px;
+
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+
+}
