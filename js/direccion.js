@@ -1,17 +1,26 @@
- document.getElementById('formDireccion').addEventListener('submit', function(e) {
-            e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    const formDireccion = document.getElementById('formDireccion') || document.querySelector('form');
+
+    if (formDireccion) {
+        formDireccion.addEventListener('submit', guardarDireccion);
+    }
+});
+
+function guardarDireccion(e) {
+    e.preventDefault();
 
 
-            const datosEnvio = {
-                nombre: document.getElementById('nombre').value.trim(),
-                direccion: document.getElementById('direccion').value.trim(),
-                comuna: document.getElementById('comuna').value.trim(),
-                telefono: document.getElementById('telefono').value.trim()
-            };
+    const direccionData = {
+        nombre: document.getElementById('nombre') ? document.getElementById('nombre').value : '',
+        calle: document.getElementById('calle') ? document.getElementById('calle').value : '',
+        numero: document.getElementById('numero') ? document.getElementById('numero').value : '',
+        comuna: document.getElementById('comuna') ? document.getElementById('comuna').value : '',
+        ciudad: document.getElementById('ciudad') ? document.getElementById('ciudad').value : '',
+        telefono: document.getElementById('telefono') ? document.getElementById('telefono').value : ''
+    };
+
+    localStorage.setItem('direccionDespacho', JSON.stringify(direccionData));
 
 
-            localStorage.setItem('datosEnvio', JSON.stringify(datosEnvio));
-
-
-            window.location.href = 'resumen.html';
-        });
+    window.location.href = 'resumen.html';
+}
