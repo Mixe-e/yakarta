@@ -71,5 +71,42 @@ function verificarSesionNavbar() {
 
 function cerrarSesion() {
     localStorage.removeItem('usuarioLogueado');
+    alert("Has cerrado sesión.");
+    window.location.href = "logeo.html";
+}
+
+function cerrarSesion() {
+    localStorage.removeItem('usuarioLogueado');
     window.location.href = 'index.html';
+}
+
+
+function iniciarSesion(emailInput, passwordInput) {
+
+    const usuariosRegistrados = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    const adminDefault = {
+        nombre: "Cristian Orlando",
+        email: "admin@tienda.com",
+        password: "123",
+        rol: "Administrador"
+    };
+
+
+    let usuarioEncontrado = usuariosRegistrados.find(u => u.email === emailInput && u.password === passwordInput);
+
+    if (!usuarioEncontrado && emailInput === adminDefault.email && passwordInput === adminDefault.password) {
+        usuarioEncontrado = adminDefault;
+    }
+
+    if (usuarioEncontrado) {
+        localStorage.setItem('usuarioLogueado', JSON.stringify({
+            nombre: usuarioEncontrado.nombre,
+            email: usuarioEncontrado.email,
+            rol: usuarioEncontrado.rol
+        }));
+        window.location.href = "index.html";
+    } else {
+        alert("Correo o contraseña incorrectos.");
+    }
 }
