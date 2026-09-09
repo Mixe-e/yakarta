@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Contactanos</title>
+    <link rel="icon" type="image/png" href="img/logofeoyakarta.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -77,56 +78,45 @@
 
 
     
-
-<h1 class="container text-center" style="padding-top: 2%; padding-bottom: 2%;">CONTACTANOS </h1>
-<a href="https://www.google.com/maps/place/Casa+del+Maestro/@-33.3603124,-70.5112494,15.5z/data=!4m17!1m7!3m6!1s0x9662c5ad46478e8d:0xc95077163f349fb2!2sCumming!8m2!3d-33.4391!4d-70.66843!16s%2Fm%2F0v3gd4p!3m8!1s0x9662c452b98310c5:0xdb01f825d5432447!5m2!4m1!1i2!8m2!3d-33.4392033!4d-70.6701915!16s%2Fg%2F11bx6x7bn0?entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-   <div style="text-align: center;"><img src="img/safsfa.jpg" alt="" width="670" height="500" ></div> 
-</a>
-
-
-<h5 class="container text-center" style="padding-top: 0.5%; padding-bottom: 0.5%;"> Gmail: Mcyakartalovin@solab.cl</h5>
-<h5 class="container text-center" style="padding-top: 0.5%; padding-bottom: 0.5%;">Telefono: 9 2152 3700</h5>
-
-<h1 class="container text-center" style="padding-top: 0.5%; padding-bottom: 0.5%;">Quieres trabajar con nosotros? <b>
-    Deja tus datos aqui:
-</h1>
+<div class="horizontal">
+<section class="bloqueContacto derecha">
+  <h1>CONTACTANOS</h1>
+  <a href="https://www.google.com/maps/place/Casa+del+Maestro/@-33.3603124,-70.5112494,15.5z/data=!4m17!1m7!3m6!1s0x9662c5ad46478e8d:0xc95077163f349fb2!2sCumming!8m2!3d-33.4391!4d-70.66843!16s%2Fm%2F0v3gd4p!3m8!1s0x9662c452b98310c5:0xdb01f825d5432447!5m2!4m1!1i2!8m2!3d-33.4392033!4d-70.6701915!16s%2Fg%2F11bx6x7bn0?entry=ttu&g_ep=EgoyMDI2MDgyMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+    <img src="img/mapa.png" alt="Mapa" class="imagenMapa">
+  </a>
+  <h5>Gmail: Mcyakartalovin@solab.cl</h5>
+  <h5>Telefono: 9 2152 3700</h5>
+</section>
 
 
+<section class="bloqueContacto izquierda">
+  <h2>Quieres trabajar con nosotros? <br> <b>Deja tus datos aqui:</b></h2>
 
-<div class="contenedor-principal">
-<div class="formcontactanos"> 
-<form id="formulario" class="row g-3" style="text-align: center;" >
-    <div class="row g-3  ">
-      <div class="col-6">
-  <label style="color: white;" for="gmail" class="form-label">Gmail</label>
-  <input type="email" class="form-control" id="gmail" maxlength="100"  pattern=".+@(gmail\.com|duoc\.cl|profesor\.duoc\.cl)$" required placeholder="name@example.com">
-  <div style="color: rgb(151, 151, 151);" id="maximo" class="form-text">
-    gmail.com\duoc.cl\profesor.duoc.cl
-</div>
-</div>
-</div>
-<div class="row g-3 align-items-center" style="text-align: center;">
-  <div class="col-6">
-  <label style="color: white;" for="nombre"  class="form-label" >Nombre</label>
-  <input type="text" class="form-control"  required  id="nombre">
-  <div style="color: rgb(151, 151, 151);" id="caracteres" class="form-text">
-    
-</div>
-</div>
+  <form id="formulario" class="formularioContacto">
+    <div class="mb-3">
+      <label for="gmail" class="form-label">Gmail</label>
+      <input type="email" class="form-control" id="gmail" maxlength="100" pattern=".+@(gmail\.com|duoc\.cl|profesor\.duoc\.cl)$" required placeholder="name@example.com">
+      <div id="maximo" class="form-text">gmail.com \ duoc.cl \ profesor.duoc.cl</div>
+    </div>
 
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" required id="nombre">
+    </div>
 
-<div class="row g-3 align-items-center">
-  <div class="col-6">
-  <label style="color: white;" for="telefono" class="form-label">Telefono</label>
-  <input type="number" class="form-control" minlength="1" maxlength="9" required id="telefono" >
-</div>
-</div>
-<div class="row g-3 align-items-center">
-  <div class="col-6"> <label style="color: white;" for="exampleFormControlTextarea1" class="form-label">Comentario</label>
-  <textarea class="form-control" id="comentario" rows="3"></textarea>
- </div>
-</div>
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Telefono</label>
+      <input type="number" class="form-control" minlength="1" maxlength="9" required id="telefono">
+    </div>
 
+    <div class="mb-3">
+      <label for="comentario" class="form-label">Comentario</label>
+      <textarea class="form-control" id="comentario" rows="3"></textarea>
+    </div>
+
+    <button id="botonpress" type="submit" class="btn btn-primary">Confirmar</button>
+  </form>
+</section>
 
 <script>
   const formulario = document.getElementById('formulario');
@@ -134,45 +124,23 @@
   formulario.addEventListener('submit', function(event) {
     event.preventDefault();
 
-
     const email = document.getElementById('gmail').value;
     const nombre = document.getElementById('nombre').value;
     const telefono = document.getElementById('telefono').value;
-  
 
-
-
-alert(`¡Información enviada correctamente!\n\nDatos registrados:\n- Nombre: ${nombre}\n- Correo: ${email}\n- Telefono: ${telefono}`);
+    alert(`¡Información enviada correctamente!\n\nDatos registrados:\n- Nombre: ${nombre}\n- Correo: ${email}\n- Telefono: ${telefono}`);
 
     formulario.reset();
   });
 </script>
 
-
-
-
-<div id="boton" class="col-6">
-    <button id="botonpress" type="submit" class="btn btn-primary mb-3" >Confirmar</button>
-  </div>
+</section>
+</div>
 </div>
 
-
-
-
 </div>
-
-
-
-
-</div>
-
-
 
 </form>
-
-
-
-
-   
+ 
 </body>
 </html>

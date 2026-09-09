@@ -84,7 +84,55 @@ h1,h2,h3,h4,h5 {
     color: white;
 }
 
+.bloqueContacto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 50px; 
+}
 
+.imagenMapa {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+
+.horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 40px 5%;
+  box-sizing: border-box;
+  gap: 40px; 
+}
+
+.derecha {
+  align-items: flex-end;
+  text-align: right;
+}
+
+
+.izquierda {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.formularioContacto .form-label {
+  color: #ffffff;
+}
+
+.formularioContacto .form-text {
+  color: rgb(151, 151, 151);
+}
+
+.formularioContacto {
+  max-width: 500px;
+  width: 100%;
+}
 
 .formcontactanos{
  display: flex;
