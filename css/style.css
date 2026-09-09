@@ -110,7 +110,39 @@ h1,h2,h3,h4,h5 {
     left: 550px;
 
   display: flex;
-  justify-content: center; /* Centrado horizontal */
-  align-items: center;     /* Centrado vertical */
+  justify-content: center; 
+  align-items: center;     
 
 }
+
+
+body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+    
+    .card-login {
+        background-color: #1e1e1e;
+        border-color: #333333;
+        max-width: 420px;
+        width: 100%;
+    }
+
+
+    .form-label {
+        color: #ffffff !important;
+    }
+
+    .form-control {
+        background-color: #2b2b2b !important;
+        border-color: #444 !important;
+        color: #ffffff !important;
+    }
+    .form-control::placeholder {
+        color: #aaaaaa !important;
+    }
+
+
+    .text-secondary, .form-check-label {
+        color: #cccccc !important;
+    }
